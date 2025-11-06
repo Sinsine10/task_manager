@@ -1,0 +1,103 @@
+body {
+  background-color: #f5f7fa;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.add-task button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-task button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 5px solid #007bff;
+}
+
+li.done {
+  text-decoration: line-through;
+  color: gray;
+  border-left: 5px solid #28a745;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+button.toggle-btn {
+  background-color: #28a745;
+}
+
+button.delete-btn {
+  background-color: #dc3545;
+}
+
+button.toggle-btn,
+button.delete-btn {
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button.toggle-btn:hover {
+  background-color: #1e7e34;
+}
+
+button.delete-btn:hover {
+  background-color: #b02a37;
+}
