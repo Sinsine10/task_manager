@@ -9,11 +9,11 @@ import { TasksModule } from './tasks/tasks.module';
       type: 'postgres',
       host: 'localhost',
       port: 5432,
-      username: 'postgres', // your PostgreSQL username
-      password: 'sinsine', // your actual password
-      database: 'taskmanager', // name of your database
+      username: '', 
+      password: '', 
+      database: 'taskmanager', 
       entities: [Task],
-      synchronize: true, // auto create tables during development
+      synchronize: true,
     }),
     TasksModule,
   ],
