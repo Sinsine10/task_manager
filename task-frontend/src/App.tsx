@@ -10,7 +10,6 @@ interface Task {
   description?: string;
   status: string;
 }
-
 const App = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [title, setTitle] = useState("");
