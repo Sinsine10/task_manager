@@ -10,19 +10,16 @@ export class TasksService {
     private readonly taskRepository: Repository<Task>,
   ) {}
 
-  // ✅ Get all tasks
+
   async findAll(): Promise<Task[]> {
     return this.taskRepository.find();
   }
-
-  // ✅ Get one task by ID
   async findOne(id: number): Promise<Task> {
     const task = await this.taskRepository.findOne({ where: { id } });
     if (!task) throw new NotFoundException(`Task with ID ${id} not found`);
     return task;
   }
 
-  // ✅ Create a new task
   async create(taskData: Partial<Task>): Promise<Task> {
     const task = this.taskRepository.create(taskData);
     return this.taskRepository.save(task);
@@ -34,8 +31,6 @@ export class TasksService {
   return this.taskRepository.save(task);
 }
 
-
-  // ✅ Delete a task
   async remove(id: number): Promise<void> {
     const result = await this.taskRepository.delete(id);
     if (result.affected === 0) {
